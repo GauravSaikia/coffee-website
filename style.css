@@ -1,0 +1,487 @@
+/* google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variable */
+:root {
+    --main-color: #bc9667;
+    --second-color: #edeae3;
+    --text-color: #1b1b1b;
+    --bg-color: #fff;
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54/ 15%);
+}
+
+body {
+    color: var(--text-color);
+}
+
+section {
+    padding: 50px 100px;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    
+}
+
+header.shadow{
+    background: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+.logo img {
+    width: 70px;
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.navbar a {
+    padding: 8px 20px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background: var(--main-color);
+    border-radius: .2rem;
+    transition: .2s all linear;
+}
+
+.header-icon {
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.header-icon i {
+    color: var(--bg-color);
+}
+
+.header-icon i:hover {
+    color: var(--main-color);
+}
+
+.search-box {
+    position: absolute;
+    top: -110%;
+    left: 0%;
+    background: var(--bg-color);
+    width: 100%;
+}
+
+.search-box.active {
+    top: 100%;
+    box-shadow: var(--box-shadow);
+    transition: 0.2s all linear;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(img/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.home-box {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 30px;
+
+}
+
+.home-box h1 {
+    font-weight: 1500;
+    font-size: 4rem;
+}
+
+.home-box p {
+    font-size: 0.90rem;
+    color: var(--bg-color);
+    margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #8a6f4d;
+}
+
+.home-image {
+    position: relative;
+    top: 10px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.about-img img {
+    border-bottom: 0.5rem;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 5.1rem;
+    letter-spacing: 1px;
+}
+
+.about-text .btn {
+    position: relative;
+    top: 5%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-box {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.product-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+}
+
+.product-box h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.product-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-content span {
+    padding: 0 1rem;
+    color: var(--bg-color);
+    background: var(--main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.product-content a{
+    padding: 0 1rem;
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.product-content a:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: .2s all linear;
+}
+.customers-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.customers-container .box{
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.stars{
+    color: var(--main-color);
+}
+.box p{
+    font-size: .99rem;
+}
+.box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: .5rem 0 .5rem;
+}
+.box img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.box:hover{
+    background: var(--second-color);
+    transition: 0.2s all linear;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 1.5rem;
+}
+.footer-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-box p{
+    font-size: .99rem;
+    margin-bottom: 10px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.social a{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--second-color);
+    border-radius: 0.2rem;
+}
+.social a:hover{
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+.footer-box li {
+    margin-bottom: 10px;
+}
+.footer-box li a{
+    color: var(--text-color);
+}
+.footer-box li a:hover{
+    color: var(--main-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem; 
+}
+.contact span{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    background: var(--second-color);
+}
+.copyright p{
+    font-size: 1.1rem;
+}
+.copyright p span{
+    color: var(--main-color);
+}
+
+
+
+
+
+@media(max-width:1058px){
+    header{
+        padding: 16px 60px;
+    }
+    section{
+        padding:50px 60px ;
+    }
+    .home-box h1{
+        font-size: 2.4rem;
+    }
+    .about-text p {
+        font-size: 0.938rem;
+        margin: 0.5rem .5rem;
+        letter-spacing: 1px;
+    }
+    
+}
+@media(max-width:991px){
+    header{
+        padding: 16px 4%;
+    }
+    section{
+        padding:50px 4% ;
+    }
+    .home-box h1{
+        font-size: 2rem;
+    }
+    .about-img img {
+        height: 366px;
+    }
+}
+@media(max-width:768px){
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        position: absolute;
+        top: -550%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--second-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar a{
+        color: var(--text-color);
+    }
+    .navbar a:hover{
+        color: var(--bg-color);
+    }
+    .navbar.active{
+        top: 100%;
+
+    }
+}
+
+@media(max-width:567px){
+.home-image{
+    width: 70%;
+    height: 88px;
+    position: relative;
+    top: -89%;
+    left: 13%;
+}
+.home{
+    text-align: center;
+}
+
+.home-box{
+    padding: 15px;
+}
+@media(max-width:415px){
+    .home-image{
+        position: relative;
+        top: -80%;
+        left: 5%;
+        width: 89%;
+    }
+}
+}
+@media(max-width:400px){
+    .home-image{
+        position: relative;
+        top: -84%;
+        left: 8%;
+        width: 85%;
+    }
+    .home{
+        margin-left: -2%;
+    }
+}
+@media(max-width:360px){
+ .home-image{
+    position: relative;
+    top: -84%;
+    left: 8%;
+    width: 85%;
+}
+
+header{
+    padding: 9px 4%;
+}
+.header-icon{
+    margin-right: 10px;
+}
+.logo img{
+    width: 45px;
+}
+.home-box{
+    padding: 15px;
+}
+}
